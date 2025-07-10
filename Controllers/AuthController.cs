@@ -55,14 +55,14 @@ namespace JwtAuthAPI.Controllers
 
             var token = GenerateJwtToken(user, out DateTime expires);
 
-            var userDto = new UserDTO(
-                user.Id,
-                user.Username,
-                user.Role,
-                token,
-                expires
-            );
-
+            var userDto = new UserDTO
+            {
+                Id = user.Id,
+                Username = user.Username,
+                Role = user.Role,
+                Token = token,
+                Expiration = expires
+            };
 
             return Ok(userDto);
         }
