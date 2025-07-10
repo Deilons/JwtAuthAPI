@@ -12,7 +12,7 @@ using System.Text;
 namespace JwtAuthAPI.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
